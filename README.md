@@ -12,10 +12,10 @@ This repo is a native [Claude Code plugin marketplace](https://docs.claude.com/e
 
 ```
 /plugin marketplace add Fernando-Kalid/toolkit
-/plugin install fk-deck@fk-toolkit
+/plugin install ophira-deck@fk-toolkit
 ```
 
-Swap `fk-deck` for any skill in the catalog below. Update later with `/plugin marketplace update fk-toolkit`.
+Swap `ophira-deck` for any skill in the catalog below. Update later with `/plugin marketplace update fk-toolkit`.
 
 > Using **Claude Code on the web** (claude.ai/code)? The `/plugin` commands aren't available in web sandboxes — commit the skill into your repo's `.claude/skills/` or pin the marketplace in `.claude/settings.json` instead. Both routes are in [docs/INSTALL.md](docs/INSTALL.md).
 
@@ -29,7 +29,7 @@ Swap `fk-deck` for any skill in the catalog below. Update later with `/plugin ma
 Copy any skill folder into `~/.claude/skills/` (available everywhere) or `<your-project>/.claude/skills/` (that project only):
 
 ```bash
-git clone https://github.com/Fernando-Kalid/toolkit.git && cp -R toolkit/plugins/fk-deck/skills/fk-deck ~/.claude/skills/
+git clone https://github.com/Fernando-Kalid/toolkit.git && cp -R toolkit/plugins/ophira-deck/skills/ophira-deck ~/.claude/skills/
 ```
 
 Full per-surface instructions (teams, API, troubleshooting): [docs/INSTALL.md](docs/INSTALL.md).
@@ -44,17 +44,7 @@ Every skill installs individually: `/plugin marketplace add Fernando-Kalid/toolk
 
 | Skill | What it does | Size |
 |---|---|---|
-| [fk-deck](plugins/fk-deck/skills/fk-deck) | Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides). | 25 KB |
 | [ophira-deck](plugins/ophira-deck/skills/ophira-deck) | Generate on-brand OPHIRA presentations as PowerPoint .pptx (imports cleanly into Google Slides). | 632 KB |
-| [success-planner-deck](plugins/success-planner-deck/skills/success-planner-deck) | Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides). | 213 KB |
-
-### Business case system (Research → Strategy → Activation)
-
-| Skill | What it does | Size |
-|---|---|---|
-| [business-case-activation](plugins/business-case-activation/skills/business-case-activation) | Converts a chosen business strategy into an actionable plan — unit-economics model, illustrative 12-month P&L direction, go-to-market plan, 90-day (30/60/90) execution roadmap… | 15 KB |
-| [business-case-research](plugins/business-case-research/skills/business-case-research) | State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor. | 19 KB |
-| [business-case-strategy](plugins/business-case-strategy/skills/business-case-strategy) | Turns a completed market/business-case research report into a decision — opportunity thesis, where-to-play, how-to-win, business-model selection, pricing direction, moat, and a… | 15 KB |
 
 ### Marketing & comms studio
 
@@ -92,4 +82,4 @@ Conventions and invariants live in [CLAUDE.md](CLAUDE.md).
 
 ## License & use
 
-© Fernando Kalid. Skills are shared so you can install and use them with your own Claude account. Brand assets and design systems referenced inside (FERNANDO KALID, OPHIRA, THE SUCCESS PLANNER) remain the property of their respective owners — don't pass them off as your own brand. A formal license may be added later.
+© Fernando Kalid. Skills are shared so you can install and use them with your own Claude account. Brand assets and design systems referenced inside (e.g. OPHIRA) remain the property of their respective owners — don't pass them off as your own brand. A formal license may be added later.

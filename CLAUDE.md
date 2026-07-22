@@ -26,6 +26,7 @@ Install command is always `/plugin install <skill-name>@fk-toolkit`. Folder name
 - `CATEGORY_TITLES` in `scripts/build_index.py` maps categories (`decks`, `business`, `marketing`) to README section titles — extend it when adding a category.
 - `scripts/sync_skills.sh` holds the `SKILLS` list for syncing from the local Claude app cache. Update it when adding/removing skills.
 - Anthropic built-in skills (docx, pdf, pptx, xlsx, skill-creator, morning, schedule, setup-cowork, consolidate-memory) are **never** committed here — they ship with Claude and are Anthropic's, not ours.
+- **This repo is PUBLIC and holds only the public skill set** (ophira-deck, comms-media-strategy, campaign-development, consent-based-ux-copywriting). The private set (fk-deck, success-planner-deck, business-case-research/-strategy/-activation) lives in the private sibling `Fernando-Kalid/private-toolkit` (marketplace `fk-private`) — never commit those skills, their assets, or references to their content here.
 
 ## Adding things
 

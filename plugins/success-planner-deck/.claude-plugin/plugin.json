@@ -1,9 +1,0 @@
-{
-  "name": "success-planner-deck",
-  "version": "0.1.0",
-  "description": "Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides).",
-  "author": {
-    "name": "Fernando Kalid",
-    "email": "fk@fernandokalid.com"
-  }
-}

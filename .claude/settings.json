@@ -5,12 +5,7 @@
     }
   },
   "enabledPlugins": {
-    "fk-deck@fk-toolkit": true,
     "ophira-deck@fk-toolkit": true,
-    "success-planner-deck@fk-toolkit": true,
-    "business-case-research@fk-toolkit": true,
-    "business-case-strategy@fk-toolkit": true,
-    "business-case-activation@fk-toolkit": true,
     "comms-media-strategy@fk-toolkit": true,
     "campaign-development@fk-toolkit": true,
     "consent-based-ux-copywriting@fk-toolkit": true

@@ -30,7 +30,6 @@ FALLBACK_REPO = "https://github.com/Fernando-Kalid/toolkit"
 BRANCH = "main"
 CATEGORY_TITLES = {
     "decks": "Branded deck generators",
-    "business": "Business case system (Research → Strategy → Activation)",
     "marketing": "Marketing & comms studio",
 }
 

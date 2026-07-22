@@ -15,12 +15,7 @@ Works in the CLI, desktop app, and IDE extensions. (Claude Code **on the web** d
 Then install any skill by name (`/plugin install <skill>@fk-toolkit`):
 
 ```
-/plugin install fk-deck@fk-toolkit
 /plugin install ophira-deck@fk-toolkit
-/plugin install success-planner-deck@fk-toolkit
-/plugin install business-case-research@fk-toolkit
-/plugin install business-case-strategy@fk-toolkit
-/plugin install business-case-activation@fk-toolkit
 /plugin install comms-media-strategy@fk-toolkit
 /plugin install campaign-development@fk-toolkit
 /plugin install consent-based-ux-copywriting@fk-toolkit
@@ -44,14 +39,14 @@ Web sessions run in ephemeral cloud sandboxes: the `/plugin` commands aren't ava
 ```bash
 git clone https://github.com/Fernando-Kalid/toolkit.git
 mkdir -p your-project/.claude/skills
-cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
+cp -R toolkit/plugins/ophira-deck/skills/ophira-deck your-project/.claude/skills/
 ```
 
 Commit the folder and every collaborator — and every web session — gets the skill.
 
 **No terminal at all?** Paste this into a Claude Code web session on your repo and let Claude do it (edit the skill list to taste):
 
-> Fetch https://github.com/Fernando-Kalid/toolkit (its catalog.json lists all skills). Copy the folders `plugins/fk-deck/skills/fk-deck` and `plugins/business-case-research/skills/business-case-research` into this repo's `.claude/skills/`, then commit. From the next session on, the skills load automatically.
+> Fetch https://github.com/Fernando-Kalid/toolkit (its catalog.json lists all skills). Copy the folders `plugins/ophira-deck/skills/ophira-deck` and `plugins/campaign-development/skills/campaign-development` into this repo's `.claude/skills/`, then commit. From the next session on, the skills load automatically.
 
 (This works because web sandboxes allow GitHub access by default — no extra network approval needed.)
 
@@ -69,9 +64,9 @@ Note: upload availability depends on your plan (Pro/Max/Team/Enterprise).
 ```bash
 git clone https://github.com/Fernando-Kalid/toolkit.git
 # available in every session on THIS machine:
-cp -R toolkit/plugins/fk-deck/skills/fk-deck ~/.claude/skills/
+cp -R toolkit/plugins/ophira-deck/skills/ophira-deck ~/.claude/skills/
 # or committed to one project (works everywhere, including web sessions):
-cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
+cp -R toolkit/plugins/ophira-deck/skills/ophira-deck your-project/.claude/skills/
 ```
 
 ## 5. Teams — preload via checked-in settings
@@ -86,12 +81,7 @@ For a team repo where everyone runs Claude Code — and for your own repos when 
     }
   },
   "enabledPlugins": {
-    "fk-deck@fk-toolkit": true,
     "ophira-deck@fk-toolkit": true,
-    "success-planner-deck@fk-toolkit": true,
-    "business-case-research@fk-toolkit": true,
-    "business-case-strategy@fk-toolkit": true,
-    "business-case-activation@fk-toolkit": true,
     "comms-media-strategy@fk-toolkit": true,
     "campaign-development@fk-toolkit": true,
     "consent-based-ux-copywriting@fk-toolkit": true
@@ -109,4 +99,4 @@ Skills also work with the Claude API (code-execution container) and the Claude A
 
 - **Skill doesn't trigger** — it activates on matching requests, not by name-typing (in Claude Code you *can* invoke it explicitly with `/skill-name`). Ask for the outcome the skill's description promises.
 - **Installed but not listed** — in Claude Code run `/plugin` to inspect; restart the session after installing. On claude.ai check Settings → Capabilities shows the skill enabled.
-- **Zip rejected on upload** — the zip must contain the skill folder at its root (e.g. `fk-deck/SKILL.md`). Zips from `scripts/package_skills.sh` and the GitHub releases already have this shape.
+- **Zip rejected on upload** — the zip must contain the skill folder at its root (e.g. `ophira-deck/SKILL.md`). Zips from `scripts/package_skills.sh` and the GitHub releases already have this shape.

@@ -1,0 +1,34 @@
+# FK Toolkit
+
+> Fernando Kalid's toolkit — Claude skills, agents, artifacts, and style systems. Utilities for excellence. Everything here installs into your own Claude account: via the Claude Code plugin marketplace, a skill zip upload on claude.ai, or a manual copy.
+
+Claude Code install: `/plugin marketplace add Fernando-Kalid/toolkit` then `/plugin install <bundle>@fk-toolkit`. Each skill is a folder with a SKILL.md whose YAML frontmatter (name, description) is the canonical metadata.
+
+## Skills
+
+- [business-case-activation](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case/skills/business-case-activation/SKILL.md): Converts a chosen business strategy into an actionable plan — unit-economics model, illustrative 12-month P&L direction, go-to-market plan, 90-day (30/60/90) execution roadmap… (bundle: business-case)
+- [business-case-research](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case/skills/business-case-research/SKILL.md): State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor. (bundle: business-case)
+- [business-case-strategy](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case/skills/business-case-strategy/SKILL.md): Turns a completed market/business-case research report into a decision — opportunity thesis, where-to-play, how-to-win, business-model selection, pricing direction, moat, and a… (bundle: business-case)
+- [campaign-development](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/comms-studio/skills/campaign-development/SKILL.md): Compiles a completed Communication & Media Strategy into a single landed, time-bound campaign — brief card, insight, franchise idea platform, seven-test quality gate, channel… (bundle: comms-studio)
+- [comms-media-strategy](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/comms-studio/skills/comms-media-strategy/SKILL.md): Generates complete, executive-ready Communication & Media Strategies for any brand, campaign, product line, business model, or institution through a nine-module system grounded in… (bundle: comms-studio)
+- [consent-based-ux-copywriting](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/comms-studio/skills/consent-based-ux-copywriting/SKILL.md): Generates UX copywriting through the Consent-Based Copywriting Framework (Ivy Lee institutional transparency + Chomsky/Herman ethical framing + cultural semiotics + strict anti-dark-pattern guardrails). (bundle: comms-studio)
+- [fk-deck](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-decks/skills/fk-deck/SKILL.md): Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides). (bundle: fk-decks)
+- [ophira-deck](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-decks/skills/ophira-deck/SKILL.md): Generate on-brand OPHIRA presentations as PowerPoint .pptx (imports cleanly into Google Slides). (bundle: fk-decks)
+- [success-planner-deck](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-decks/skills/success-planner-deck/SKILL.md): Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides). (bundle: fk-decks)
+
+## Bundles (Claude Code plugins)
+
+- [business-case](https://github.com/Fernando-Kalid/toolkit/tree/main/plugins/business-case): Three-phase business case system: Research (market audit with consulting-grade rigor) → Strategy (Go / No-Go / Pivot decision) → Activation (unit economics, GTM, 90-day roadmap). English & Spanish. Install: `/plugin install business-case@fk-toolkit`
+- [comms-studio](https://github.com/Fernando-Kalid/toolkit/tree/main/plugins/comms-studio): Marketing & communication suite: nine-module Communication & Media Strategy builder, campaign development with a seven-test quality gate, and consent-based UX copywriting (anti-dark-pattern). Install: `/plugin install comms-studio@fk-toolkit`
+- [fk-decks](https://github.com/Fernando-Kalid/toolkit/tree/main/plugins/fk-decks): Branded presentation generators (.pptx, Google Slides compatible): FERNANDO KALID personal brand, OPHIRA, and THE SUCCESS PLANNER — each with its full design system, components, and logos. Install: `/plugin install fk-decks@fk-toolkit`
+
+## Documentation
+
+- [README](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/README.md): human-facing overview and catalog
+- [Install guide](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/docs/INSTALL.md): per-surface install instructions (Claude Code, claude.ai, manual, teams)
+- [Maintainer guide](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/CLAUDE.md): repo conventions for humans and agents making changes
+
+## Machine index
+
+- [catalog.json](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/catalog.json): full inventory with complete descriptions, paths, and install commands
+- [marketplace.json](https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/.claude-plugin/marketplace.json): Claude Code plugin marketplace manifest

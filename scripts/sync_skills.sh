@@ -14,14 +14,12 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-# The custom skills tracked in this repo (one plugin per skill, same name).
+# The PUBLIC custom skills tracked in this repo (one plugin per skill,
+# same name). The private set (fk-deck, success-planner-deck, and the
+# business-case suite) lives in Fernando-Kalid/private-toolkit — sync it
+# there, never here.
 SKILLS=(
-  fk-deck
   ophira-deck
-  success-planner-deck
-  business-case-research
-  business-case-strategy
-  business-case-activation
   comms-media-strategy
   campaign-development
   consent-based-ux-copywriting

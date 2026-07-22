@@ -7,55 +7,9 @@
   },
   "metadata": {
     "description": "Fernando Kalid's toolkit — Claude skills, agents, artifacts, and style systems. Utilities for excellence. One plugin per skill: install exactly what you want.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
-    {
-      "name": "business-case-activation",
-      "source": "./plugins/business-case-activation",
-      "description": "Converts a chosen business strategy into an actionable plan — unit-economics model, illustrative 12-month P&L direction, go-to-market plan, 90-day (30/60/90) execution roadmap, KPI/North-Star dashboard, an experiment plan to de-risk key…",
-      "version": "0.1.0",
-      "author": {
-        "name": "Fernando Kalid"
-      },
-      "category": "business",
-      "tags": [
-        "gtm",
-        "unit-economics",
-        "business-case",
-        "phase-3"
-      ]
-    },
-    {
-      "name": "business-case-research",
-      "source": "./plugins/business-case-research",
-      "description": "State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor.",
-      "version": "0.1.0",
-      "author": {
-        "name": "Fernando Kalid"
-      },
-      "category": "business",
-      "tags": [
-        "market-research",
-        "business-case",
-        "phase-1"
-      ]
-    },
-    {
-      "name": "business-case-strategy",
-      "source": "./plugins/business-case-strategy",
-      "description": "Turns a completed market/business-case research report into a decision — opportunity thesis, where-to-play, how-to-win, business-model selection, pricing direction, moat, and a clear Go / No-Go / Pivot recommendation with conviction level…",
-      "version": "0.1.0",
-      "author": {
-        "name": "Fernando Kalid"
-      },
-      "category": "business",
-      "tags": [
-        "strategy",
-        "business-case",
-        "phase-2"
-      ]
-    },
     {
       "name": "campaign-development",
       "source": "./plugins/campaign-development",
@@ -103,22 +57,6 @@
       ]
     },
     {
-      "name": "fk-deck",
-      "source": "./plugins/fk-deck",
-      "description": "Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides).",
-      "version": "0.1.0",
-      "author": {
-        "name": "Fernando Kalid"
-      },
-      "category": "decks",
-      "tags": [
-        "presentations",
-        "pptx",
-        "branding",
-        "fernando-kalid"
-      ]
-    },
-    {
       "name": "ophira-deck",
       "source": "./plugins/ophira-deck",
       "description": "Generate on-brand OPHIRA presentations as PowerPoint .pptx (imports cleanly into Google Slides).",
@@ -132,22 +70,6 @@
         "pptx",
         "branding",
         "ophira"
-      ]
-    },
-    {
-      "name": "success-planner-deck",
-      "source": "./plugins/success-planner-deck",
-      "description": "Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides).",
-      "version": "0.1.0",
-      "author": {
-        "name": "Fernando Kalid"
-      },
-      "category": "decks",
-      "tags": [
-        "presentations",
-        "pptx",
-        "branding",
-        "success-planner"
       ]
     }
   ]

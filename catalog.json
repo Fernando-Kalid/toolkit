@@ -13,76 +13,6 @@
   },
   "plugins": [
     {
-      "name": "business-case-activation",
-      "description": "Converts a chosen business strategy into an actionable plan — unit-economics model, illustrative 12-month P&L direction, go-to-market plan, 90-day (30/60/90) execution roadmap, KPI/North-Star dashboard, an experiment plan to de-risk key…",
-      "version": "0.1.0",
-      "category": "business",
-      "tags": [
-        "gtm",
-        "unit-economics",
-        "business-case",
-        "phase-3"
-      ],
-      "path": "plugins/business-case-activation",
-      "install": "/plugin install business-case-activation@fk-toolkit",
-      "skills": [
-        {
-          "name": "business-case-activation",
-          "description": "Converts a chosen business strategy into an actionable plan — unit-economics model, illustrative 12-month P&L direction, go-to-market plan, 90-day (30/60/90) execution roadmap, KPI/North-Star dashboard, an experiment plan to de-risk key assumptions, and milestones with kill-criteria. Use this whenever the user has a strategy or business decision and wants to operationalize it — an execution plan, GTM plan, roadmap, unit economics, financial-model direction, KPIs, a 90-day plan, milestones, or budget/resourcing — or says things like \"how do we execute\", \"build the plan\", \"go-to-market\", \"roadmap\", \"unit economics\", \"plan de acción\", \"modelo financiero\", \"métricas\", or \"fase 3\". This is Phase 3 of the Business Case sequence (Research to Strategy to Activation) — it turns the Phase 2 decision into something a team can act on. Adapts to the user's language (English or Spanish); financial outputs are illustrative planning scenarios, clearly labeled, not guarantees.",
-          "path": "plugins/business-case-activation/skills/business-case-activation",
-          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case-activation/skills/business-case-activation/SKILL.md",
-          "files": 2,
-          "size_kb": 15
-        }
-      ]
-    },
-    {
-      "name": "business-case-research",
-      "description": "State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor.",
-      "version": "0.1.0",
-      "category": "business",
-      "tags": [
-        "market-research",
-        "business-case",
-        "phase-1"
-      ],
-      "path": "plugins/business-case-research",
-      "install": "/plugin install business-case-research@fk-toolkit",
-      "skills": [
-        {
-          "name": "business-case-research",
-          "description": "State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor. Use this whenever the user wants to research, audit, size, validate, or investigate a business idea, market, niche, product, or opportunity; asks for market research, a business case, TAM/SAM/SOM sizing, a competitive landscape, customer segmentation, industry (Porter) analysis, trends, or sector economics; or says things like \"audit this idea\", \"is there a market for X\", \"investiga este negocio\", \"analiza este mercado\", \"tamaño de mercado\", \"haz un business case\", or \"market research\". This is Phase 1 of a 3-part sequence (Research to Strategy to Activation) and deliberately produces findings, hypotheses, and open questions WITHOUT a final strategic recommendation. Adapts to the user's language (English or Spanish) and pulls live web data when available, clearly labeled estimates otherwise.",
-          "path": "plugins/business-case-research/skills/business-case-research",
-          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case-research/skills/business-case-research/SKILL.md",
-          "files": 2,
-          "size_kb": 19
-        }
-      ]
-    },
-    {
-      "name": "business-case-strategy",
-      "description": "Turns a completed market/business-case research report into a decision — opportunity thesis, where-to-play, how-to-win, business-model selection, pricing direction, moat, and a clear Go / No-Go / Pivot recommendation with conviction level…",
-      "version": "0.1.0",
-      "category": "business",
-      "tags": [
-        "strategy",
-        "business-case",
-        "phase-2"
-      ],
-      "path": "plugins/business-case-strategy",
-      "install": "/plugin install business-case-strategy@fk-toolkit",
-      "skills": [
-        {
-          "name": "business-case-strategy",
-          "description": "Turns a completed market/business-case research report into a decision — opportunity thesis, where-to-play, how-to-win, business-model selection, pricing direction, moat, and a clear Go / No-Go / Pivot recommendation with conviction level and a transparent decision scorecard. Use this whenever the user has research or solid context on a business idea and wants strategy, a recommendation, a decision, positioning, a business-model choice, a pricing strategy, or a go/no-go call — or says things like \"what should we do\", \"should I pursue this\", \"pick a business model\", \"define the strategy\", \"decide\", \"estrategia\", \"recomendación\", \"conviene o no\", or \"fase 2\". This is Phase 2 of the Business Case sequence (Research to Strategy to Activation) — it consumes Phase 1 findings (or a pasted brief) and outputs the strategic decision layer — not the full financial model or GTM roadmap, which are Phase 3. Adapts to the user's language (English or Spanish).",
-          "path": "plugins/business-case-strategy/skills/business-case-strategy",
-          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case-strategy/skills/business-case-strategy/SKILL.md",
-          "files": 2,
-          "size_kb": 15
-        }
-      ]
-    },
-    {
       "name": "campaign-development",
       "description": "Compiles a completed Communication & Media Strategy into a single landed, time-bound campaign — brief card, insight, franchise idea platform, seven-test quality gate, channel ecosystem, arc, and pre-registered measurement — through a…",
       "version": "0.1.0",
@@ -153,30 +83,6 @@
       ]
     },
     {
-      "name": "fk-deck",
-      "description": "Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides).",
-      "version": "0.1.0",
-      "category": "decks",
-      "tags": [
-        "presentations",
-        "pptx",
-        "branding",
-        "fernando-kalid"
-      ],
-      "path": "plugins/fk-deck",
-      "install": "/plugin install fk-deck@fk-toolkit",
-      "skills": [
-        {
-          "name": "fk-deck",
-          "description": "Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides). Use whenever the user asks to create, build, design, or update a presentation, deck, slides, pitch, keynote, board update, propuesta, or report for Fernando Kalid or \"con mi marca / estilo FK / marca personal de Fernando\" — even if they just say \"haz una presentación\" in a Fernando Kalid personal context (his ventures' OWN branded decks are different skills: Success Planner/Winners Circle and Ophira have their own). Applies the exact FK design system: dark editorial (carbón/grafito surfaces, hueso punctuation), single \"navaja\" oxide-red accent, Space Grotesk + Cormorant Garamond italic + IBM Plex Mono, the ∇ micro-mark and Feynman-vertex signature, hairlines-only chrome, and the executive component library (KPIs, callouts, insight cards, tables, pillars, process flows, timelines, dark-themed charts).",
-          "path": "plugins/fk-deck/skills/fk-deck",
-          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-deck/skills/fk-deck/SKILL.md",
-          "files": 4,
-          "size_kb": 25
-        }
-      ]
-    },
-    {
       "name": "ophira-deck",
       "description": "Generate on-brand OPHIRA presentations as PowerPoint .pptx (imports cleanly into Google Slides).",
       "version": "0.1.0",
@@ -197,30 +103,6 @@
           "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/ophira-deck/skills/ophira-deck/SKILL.md",
           "files": 9,
           "size_kb": 632
-        }
-      ]
-    },
-    {
-      "name": "success-planner-deck",
-      "description": "Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides).",
-      "version": "0.1.0",
-      "category": "decks",
-      "tags": [
-        "presentations",
-        "pptx",
-        "branding",
-        "success-planner"
-      ],
-      "path": "plugins/success-planner-deck",
-      "install": "/plugin install success-planner-deck@fk-toolkit",
-      "skills": [
-        {
-          "name": "success-planner-deck",
-          "description": "Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides). Use whenever the user asks to create, build, design, or update a Success Planner presentation, deck, slides, pitch, keynote, board update, all-hands, QBR, or report — or anything \"in the Success Planner / Winner's Circle style / brand\". Applies the exact design system (warm bone & onyx surfaces, Playfair Display italic + Bricolage Grotesque + Montserrat, single cognac accent, gold hero numbers), the six master layouts, the official logo, and the executive component library (charts, KPIs, deltas, comparisons, callouts, diagrams, RAG/OKR status, and CFO/COO/CEO/CMO/CIO dashboards).",
-          "path": "plugins/success-planner-deck/skills/success-planner-deck",
-          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/success-planner-deck/skills/success-planner-deck/SKILL.md",
-          "files": 8,
-          "size_kb": 213
         }
       ]
     }

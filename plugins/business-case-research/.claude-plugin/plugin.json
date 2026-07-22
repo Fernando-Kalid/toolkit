@@ -1,0 +1,9 @@
+{
+  "name": "business-case-research",
+  "version": "0.1.0",
+  "description": "State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor.",
+  "author": {
+    "name": "Fernando Kalid",
+    "email": "fk@fernandokalid.com"
+  }
+}

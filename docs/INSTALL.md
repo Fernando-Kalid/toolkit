@@ -6,19 +6,27 @@ Pick the path for where you use Claude:
 
 ## 1. Claude Code — via the plugin marketplace (recommended)
 
-Works in the CLI, desktop app, and IDE extensions. Inside a Claude Code session:
+Works in the CLI, desktop app, and IDE extensions. Each skill is its own plugin, so you install exactly the ones you want. Inside a Claude Code session, add the marketplace once:
 
 ```
 /plugin marketplace add Fernando-Kalid/toolkit
 ```
 
-Then install the bundle(s) you want:
+Then install any skill by name (`/plugin install <skill>@fk-toolkit`):
 
 ```
-/plugin install fk-decks@fk-toolkit
-/plugin install business-case@fk-toolkit
-/plugin install comms-studio@fk-toolkit
+/plugin install fk-deck@fk-toolkit
+/plugin install ophira-deck@fk-toolkit
+/plugin install success-planner-deck@fk-toolkit
+/plugin install business-case-research@fk-toolkit
+/plugin install business-case-strategy@fk-toolkit
+/plugin install business-case-activation@fk-toolkit
+/plugin install comms-media-strategy@fk-toolkit
+/plugin install campaign-development@fk-toolkit
+/plugin install consent-based-ux-copywriting@fk-toolkit
 ```
+
+(Want everything? Paste the whole block — each line is independent.)
 
 Check what's installed with `/plugin`. Get updates later with:
 
@@ -40,9 +48,9 @@ Note: upload availability depends on your plan (Pro/Max/Team/Enterprise).
 ```bash
 git clone https://github.com/Fernando-Kalid/toolkit.git
 # available in every session:
-cp -R toolkit/plugins/fk-decks/skills/fk-deck ~/.claude/skills/
+cp -R toolkit/plugins/fk-deck/skills/fk-deck ~/.claude/skills/
 # or only in one project:
-cp -R toolkit/plugins/fk-decks/skills/fk-deck your-project/.claude/skills/
+cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
 ```
 
 ## 4. Teams — preload via checked-in settings
@@ -56,7 +64,11 @@ For a team repo where everyone runs Claude Code, you can pin the marketplace and
       "source": { "source": "github", "repo": "Fernando-Kalid/toolkit" }
     }
   },
-  "enabledPlugins": { "business-case@fk-toolkit": true }
+  "enabledPlugins": {
+    "business-case-research@fk-toolkit": true,
+    "business-case-strategy@fk-toolkit": true,
+    "business-case-activation@fk-toolkit": true
+  }
 }
 ```
 

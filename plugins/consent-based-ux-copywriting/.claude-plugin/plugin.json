@@ -1,0 +1,9 @@
+{
+  "name": "consent-based-ux-copywriting",
+  "version": "0.1.0",
+  "description": "Generates UX copywriting through the Consent-Based Copywriting Framework (Ivy Lee institutional transparency + Chomsky/Herman ethical framing + cultural semiotics + strict anti-dark-pattern guardrails).",
+  "author": {
+    "name": "Fernando Kalid",
+    "email": "fk@fernandokalid.com"
+  }
+}

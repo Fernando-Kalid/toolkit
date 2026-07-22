@@ -6,7 +6,7 @@ Pick the path for where you use Claude:
 
 ## 1. Claude Code — via the plugin marketplace (recommended)
 
-Works in the CLI, desktop app, and IDE extensions. Each skill is its own plugin, so you install exactly the ones you want. Inside a Claude Code session, add the marketplace once:
+Works in the CLI, desktop app, and IDE extensions. (Claude Code **on the web** doesn't support `/plugin` commands — see section 2 for the routes that work there.) Each skill is its own plugin, so you install exactly the ones you want. Inside a Claude Code session, add the marketplace once:
 
 ```
 /plugin marketplace add Fernando-Kalid/toolkit
@@ -34,7 +34,22 @@ Check what's installed with `/plugin`. Get updates later with:
 /plugin marketplace update fk-toolkit
 ```
 
-## 2. claude.ai and the Claude apps — via zip upload
+## 2. Claude Code on the web (claude.ai/code)
+
+Web sessions run in ephemeral cloud sandboxes: the `/plugin` commands aren't available there, and plugins installed on your machine don't carry over. Two routes that do work:
+
+- **Pin the marketplace in the repo you work on** — commit the settings block from section 5 (Teams) to that repo's `.claude/settings.json`. Web sessions on that repo will prompt to install the declared plugins.
+- **Commit the skill directly into your repo** — the zero-machinery option. Skills at `.claude/skills/` load automatically in every session on that repo (web, CLI, desktop, IDE), no installation step:
+
+```bash
+git clone https://github.com/Fernando-Kalid/toolkit.git
+mkdir -p your-project/.claude/skills
+cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
+```
+
+Commit the folder and every collaborator — and every web session — gets the skill.
+
+## 3. claude.ai and the Claude apps — via zip upload
 
 1. Grab the zip for the skill you want from the [latest GitHub release](../../../releases/latest). (No release yet, or want the bleeding edge? Clone the repo and run `bash scripts/package_skills.sh` — zips appear in `dist/skills/`.)
 2. In Claude go to **Settings → Capabilities** (skills require the file-creation / code-execution capability to be enabled).
@@ -43,17 +58,17 @@ Check what's installed with `/plugin`. Get updates later with:
 
 Note: upload availability depends on your plan (Pro/Max/Team/Enterprise).
 
-## 3. Claude Code — manual copy (no marketplace)
+## 4. Claude Code — manual copy (no marketplace)
 
 ```bash
 git clone https://github.com/Fernando-Kalid/toolkit.git
-# available in every session:
+# available in every session on THIS machine:
 cp -R toolkit/plugins/fk-deck/skills/fk-deck ~/.claude/skills/
-# or only in one project:
+# or committed to one project (works everywhere, including web sessions):
 cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
 ```
 
-## 4. Teams — preload via checked-in settings
+## 5. Teams — preload via checked-in settings
 
 For a team repo where everyone runs Claude Code, you can pin the marketplace and plugins in the project's `.claude/settings.json` so teammates get prompted to install them automatically:
 
@@ -72,7 +87,7 @@ For a team repo where everyone runs Claude Code, you can pin the marketplace and
 }
 ```
 
-## 5. API / Agent SDK
+## 6. API / Agent SDK
 
 Skills also work with the Claude API (code-execution container) and the Claude Agent SDK — upload the skill folder or point the SDK at it. See the [Agent Skills docs](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) for the current mechanics.
 

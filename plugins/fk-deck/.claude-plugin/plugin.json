@@ -1,0 +1,9 @@
+{
+  "name": "fk-deck",
+  "version": "0.1.0",
+  "description": "Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides).",
+  "author": {
+    "name": "Fernando Kalid",
+    "email": "fk@fernandokalid.com"
+  }
+}

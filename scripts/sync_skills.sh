@@ -5,13 +5,27 @@
 # The Claude desktop app syncs the account's skills to:
 #   ~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/<uuid>/<uuid>/skills/
 # This script finds the most recently modified snapshot and copies each
-# custom skill into its bundle. Anthropic built-ins (docx, pdf, pptx, xlsx,
-# skill-creator, morning, schedule, setup-cowork, consolidate-memory) are
-# intentionally NOT synced — they ship with Claude and are not ours.
+# custom skill into its plugin (plugins/<skill>/skills/<skill>/). Anthropic
+# built-ins (docx, pdf, pptx, xlsx, skill-creator, morning, schedule,
+# setup-cowork, consolidate-memory) are intentionally NOT synced — they ship
+# with Claude and are not ours.
 #
 # After editing a skill on claude.ai: run this, review `git diff`, commit.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+
+# The custom skills tracked in this repo (one plugin per skill, same name).
+SKILLS=(
+  fk-deck
+  ophira-deck
+  success-planner-deck
+  business-case-research
+  business-case-strategy
+  business-case-activation
+  comms-media-strategy
+  campaign-development
+  consent-based-ux-copywriting
+)
 
 SRC=$(find "$HOME/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin" \
   -maxdepth 3 -type d -name skills 2>/dev/null | while read -r d; do
@@ -25,25 +39,15 @@ if [[ -z "${SRC:-}" ]]; then
 fi
 echo "Syncing from: $SRC"
 
-# skill -> bundle mapping (keep in step with .claude-plugin/marketplace.json)
-sync() { # $1 = skill name, $2 = bundle name
-  if [[ -d "$SRC/$1" ]]; then
-    rsync -a --delete --exclude=.DS_Store --exclude=__pycache__ "$SRC/$1" "plugins/$2/skills/"
-    echo "  synced $1 -> plugins/$2/skills/"
+for s in "${SKILLS[@]}"; do
+  if [[ -d "$SRC/$s" ]]; then
+    mkdir -p "plugins/$s/skills"
+    rsync -a --delete --exclude=.DS_Store --exclude=__pycache__ "$SRC/$s" "plugins/$s/skills/"
+    echo "  synced $s -> plugins/$s/skills/"
   else
-    echo "  WARNING: $1 not found in snapshot (skipped)" >&2
+    echo "  WARNING: $s not found in snapshot (skipped)" >&2
   fi
-}
-
-sync fk-deck                      fk-decks
-sync ophira-deck                  fk-decks
-sync success-planner-deck         fk-decks
-sync business-case-research       business-case
-sync business-case-strategy       business-case
-sync business-case-activation     business-case
-sync comms-media-strategy         comms-studio
-sync campaign-development         comms-studio
-sync consent-based-ux-copywriting comms-studio
+done
 
 python3 scripts/build_index.py
 echo "Now review with: git diff"

@@ -17,6 +17,8 @@ This repo is a native [Claude Code plugin marketplace](https://docs.claude.com/e
 
 Swap `fk-deck` for any skill in the catalog below. Update later with `/plugin marketplace update fk-toolkit`.
 
+> Using **Claude Code on the web** (claude.ai/code)? The `/plugin` commands aren't available in web sandboxes — commit the skill into your repo's `.claude/skills/` or pin the marketplace in `.claude/settings.json` instead. Both routes are in [docs/INSTALL.md](docs/INSTALL.md).
+
 ### claude.ai / Claude apps
 
 1. Download the zip for the skill you want from the [latest release](../../releases/latest) (or clone and run `bash scripts/package_skills.sh` — zips land in `dist/skills/`).

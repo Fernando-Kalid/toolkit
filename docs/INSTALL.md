@@ -36,7 +36,7 @@ Check what's installed with `/plugin`. Get updates later with:
 
 ## 2. Claude Code on the web (claude.ai/code)
 
-Web sessions run in ephemeral cloud sandboxes: the `/plugin` commands aren't available there, and plugins installed on your machine don't carry over. Two routes that do work:
+Web sessions run in ephemeral cloud sandboxes: the `/plugin` commands aren't available there, and plugins installed on your machine don't carry over. Skills uploaded to claude.ai (Settings → Capabilities) don't appear either — [skills never sync across surfaces](https://code.claude.com/docs/en/desktop.md), and Claude Code only reads skills from the filesystem. Two routes that do work:
 
 - **Pin the marketplace in the repo you work on** — commit the settings block from section 5 (Teams) to that repo's `.claude/settings.json`. Web sessions on that repo will prompt to install the declared plugins.
 - **Commit the skill directly into your repo** — the zero-machinery option. Skills at `.claude/skills/` load automatically in every session on that repo (web, CLI, desktop, IDE), no installation step:
@@ -48,6 +48,12 @@ cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
 ```
 
 Commit the folder and every collaborator — and every web session — gets the skill.
+
+**No terminal at all?** Paste this into a Claude Code web session on your repo and let Claude do it (edit the skill list to taste):
+
+> Fetch https://github.com/Fernando-Kalid/toolkit (its catalog.json lists all skills). Copy the folders `plugins/fk-deck/skills/fk-deck` and `plugins/business-case-research/skills/business-case-research` into this repo's `.claude/skills/`, then commit. From the next session on, the skills load automatically.
+
+(This works because web sandboxes allow GitHub access by default — no extra network approval needed.)
 
 ## 3. claude.ai and the Claude apps — via zip upload
 
@@ -70,7 +76,7 @@ cp -R toolkit/plugins/fk-deck/skills/fk-deck your-project/.claude/skills/
 
 ## 5. Teams — preload via checked-in settings
 
-For a team repo where everyone runs Claude Code, you can pin the marketplace and plugins in the project's `.claude/settings.json` so teammates get prompted to install them automatically:
+For a team repo where everyone runs Claude Code — and for your own repos when you work from the web — pin the marketplace and plugins in the project's `.claude/settings.json` so sessions load them automatically (members confirm once). Here's the full block; delete the skills you don't want:
 
 ```json
 {
@@ -80,12 +86,20 @@ For a team repo where everyone runs Claude Code, you can pin the marketplace and
     }
   },
   "enabledPlugins": {
+    "fk-deck@fk-toolkit": true,
+    "ophira-deck@fk-toolkit": true,
+    "success-planner-deck@fk-toolkit": true,
     "business-case-research@fk-toolkit": true,
     "business-case-strategy@fk-toolkit": true,
-    "business-case-activation@fk-toolkit": true
+    "business-case-activation@fk-toolkit": true,
+    "comms-media-strategy@fk-toolkit": true,
+    "campaign-development@fk-toolkit": true,
+    "consent-based-ux-copywriting@fk-toolkit": true
   }
 }
 ```
+
+This repo ships that exact file at [.claude/settings.json](../.claude/settings.json) — sessions on the toolkit repo itself (including web) get all nine skills, and you can copy the file into any other repo as-is.
 
 ## 6. API / Agent SDK
 

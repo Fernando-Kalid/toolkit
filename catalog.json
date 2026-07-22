@@ -1,0 +1,139 @@
+{
+  "name": "fk-toolkit",
+  "description": "Fernando Kalid's toolkit — Claude skills, agents, artifacts, and style systems. Utilities for excellence.",
+  "repo": "https://github.com/Fernando-Kalid/toolkit",
+  "owner": "Fernando Kalid",
+  "install": {
+    "claude_code": [
+      "/plugin marketplace add Fernando-Kalid/toolkit",
+      "/plugin install <bundle>@fk-toolkit"
+    ],
+    "claude_ai": "Download a skill zip from the latest GitHub release (or run scripts/package_skills.sh), then upload it in Claude settings under Capabilities → Skills.",
+    "manual": "Copy any skill folder into ~/.claude/skills/ (personal) or <project>/.claude/skills/ (project)."
+  },
+  "plugins": [
+    {
+      "name": "business-case",
+      "description": "Three-phase business case system: Research (market audit with consulting-grade rigor) → Strategy (Go / No-Go / Pivot decision) → Activation (unit economics, GTM, 90-day roadmap). English & Spanish.",
+      "version": "0.1.0",
+      "category": "business",
+      "tags": [
+        "strategy",
+        "market-research",
+        "business-case",
+        "gtm"
+      ],
+      "path": "plugins/business-case",
+      "install": "/plugin install business-case@fk-toolkit",
+      "skills": [
+        {
+          "name": "business-case-activation",
+          "description": "Converts a chosen business strategy into an actionable plan — unit-economics model, illustrative 12-month P&L direction, go-to-market plan, 90-day (30/60/90) execution roadmap, KPI/North-Star dashboard, an experiment plan to de-risk key assumptions, and milestones with kill-criteria. Use this whenever the user has a strategy or business decision and wants to operationalize it — an execution plan, GTM plan, roadmap, unit economics, financial-model direction, KPIs, a 90-day plan, milestones, or budget/resourcing — or says things like \"how do we execute\", \"build the plan\", \"go-to-market\", \"roadmap\", \"unit economics\", \"plan de acción\", \"modelo financiero\", \"métricas\", or \"fase 3\". This is Phase 3 of the Business Case sequence (Research to Strategy to Activation) — it turns the Phase 2 decision into something a team can act on. Adapts to the user's language (English or Spanish); financial outputs are illustrative planning scenarios, clearly labeled, not guarantees.",
+          "path": "plugins/business-case/skills/business-case-activation",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case/skills/business-case-activation/SKILL.md",
+          "files": 2,
+          "size_kb": 15
+        },
+        {
+          "name": "business-case-research",
+          "description": "State-of-the-art market and business-case research report for auditing a business idea, market, product, or opportunity with McKinsey/Bain/BCG/HBS/equity-research rigor. Use this whenever the user wants to research, audit, size, validate, or investigate a business idea, market, niche, product, or opportunity; asks for market research, a business case, TAM/SAM/SOM sizing, a competitive landscape, customer segmentation, industry (Porter) analysis, trends, or sector economics; or says things like \"audit this idea\", \"is there a market for X\", \"investiga este negocio\", \"analiza este mercado\", \"tamaño de mercado\", \"haz un business case\", or \"market research\". This is Phase 1 of a 3-part sequence (Research to Strategy to Activation) and deliberately produces findings, hypotheses, and open questions WITHOUT a final strategic recommendation. Adapts to the user's language (English or Spanish) and pulls live web data when available, clearly labeled estimates otherwise.",
+          "path": "plugins/business-case/skills/business-case-research",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case/skills/business-case-research/SKILL.md",
+          "files": 2,
+          "size_kb": 19
+        },
+        {
+          "name": "business-case-strategy",
+          "description": "Turns a completed market/business-case research report into a decision — opportunity thesis, where-to-play, how-to-win, business-model selection, pricing direction, moat, and a clear Go / No-Go / Pivot recommendation with conviction level and a transparent decision scorecard. Use this whenever the user has research or solid context on a business idea and wants strategy, a recommendation, a decision, positioning, a business-model choice, a pricing strategy, or a go/no-go call — or says things like \"what should we do\", \"should I pursue this\", \"pick a business model\", \"define the strategy\", \"decide\", \"estrategia\", \"recomendación\", \"conviene o no\", or \"fase 2\". This is Phase 2 of the Business Case sequence (Research to Strategy to Activation) — it consumes Phase 1 findings (or a pasted brief) and outputs the strategic decision layer — not the full financial model or GTM roadmap, which are Phase 3. Adapts to the user's language (English or Spanish).",
+          "path": "plugins/business-case/skills/business-case-strategy",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/business-case/skills/business-case-strategy/SKILL.md",
+          "files": 2,
+          "size_kb": 15
+        }
+      ]
+    },
+    {
+      "name": "comms-studio",
+      "description": "Marketing & communication suite: nine-module Communication & Media Strategy builder, campaign development with a seven-test quality gate, and consent-based UX copywriting (anti-dark-pattern).",
+      "version": "0.1.0",
+      "category": "marketing",
+      "tags": [
+        "comms",
+        "campaigns",
+        "copywriting",
+        "brand-strategy"
+      ],
+      "path": "plugins/comms-studio",
+      "install": "/plugin install comms-studio@fk-toolkit",
+      "skills": [
+        {
+          "name": "campaign-development",
+          "description": "Compiles a completed Communication & Media Strategy into a single landed, time-bound campaign — brief card, insight, franchise idea platform, seven-test quality gate, channel ecosystem, arc, and pre-registered measurement — through a six-step methodology. Use this skill whenever the user wants to create, plan, develop, or land a campaign, launch, activation, drop, promotion, or seasonal push out of an existing strategy — even if they only say \"turn this into a campaign,\" \"plan the launch,\" \"I need a campaign for Q4,\" \"let's activate this,\" \"bájame la estrategia a una campaña,\" or \"necesito una campaña / un lanzamiento.\" Also use it to audit or red-team an existing campaign idea against the seven discriminating tests (ownership, sacrifice, branding, insight, fertility, Tuesday, register), or to generate and score candidate campaign ideas from a brief. Accepts the strategy as pasted text, .md files, .doc/.docx files, or directly from a comms-media-strategy build earlier in the conversation.",
+          "path": "plugins/comms-studio/skills/campaign-development",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/comms-studio/skills/campaign-development/SKILL.md",
+          "files": 5,
+          "size_kb": 36
+        },
+        {
+          "name": "comms-media-strategy",
+          "description": "Generates complete, executive-ready Communication & Media Strategies for any brand, campaign, product line, business model, or institution through a nine-module system grounded in ontology, epistemics, semiotics, cultural analysis, behavioral science, and commercial economics. Use this skill whenever the user asks for a communication strategy, media strategy, brand strategy, campaign strategy, positioning, narrative or messaging architecture, channel strategy, launch or turnaround strategy, or an audit/red-team of an existing strategy — even if they only say \"help me figure out how to market X,\" \"we need a comms plan,\" \"how should this brand show up,\" or \"estrategia de comunicación / de medios / de marca.\" Also use it for partial engagements: defining what a brand fundamentally is, semiotic or brand-codes audits, cultural and ideological mapping of a market, behavior-change planning, communication KPI systems, or converting an existing strategy into a C-suite presentation.",
+          "path": "plugins/comms-studio/skills/comms-media-strategy",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/comms-studio/skills/comms-media-strategy/SKILL.md",
+          "files": 15,
+          "size_kb": 95
+        },
+        {
+          "name": "consent-based-ux-copywriting",
+          "description": "Generates UX copywriting through the Consent-Based Copywriting Framework (Ivy Lee institutional transparency + Chomsky/Herman ethical framing + cultural semiotics + strict anti-dark-pattern guardrails). Use this skill whenever the user asks for UX copy, landing page copy, product page copy, pricing copy, onboarding copy, checkout copy, microcopy, error messages, empty states, modals, tooltips, confirmation states, lifecycle emails, campaign concepts, product positioning, brand manifestos, or a copy audit — even if they just say \"write copy for…\", \"improve this page\", \"name this button\", or \"review my funnel\". Also use it when the user asks for conversion copy, persuasion, or messaging strategy for a product or feature.",
+          "path": "plugins/comms-studio/skills/consent-based-ux-copywriting",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/comms-studio/skills/consent-based-ux-copywriting/SKILL.md",
+          "files": 1,
+          "size_kb": 9
+        }
+      ]
+    },
+    {
+      "name": "fk-decks",
+      "description": "Branded presentation generators (.pptx, Google Slides compatible): FERNANDO KALID personal brand, OPHIRA, and THE SUCCESS PLANNER — each with its full design system, components, and logos.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "tags": [
+        "presentations",
+        "pptx",
+        "branding",
+        "design-system"
+      ],
+      "path": "plugins/fk-decks",
+      "install": "/plugin install fk-decks@fk-toolkit",
+      "skills": [
+        {
+          "name": "fk-deck",
+          "description": "Generate on-brand FERNANDO KALID personal-brand presentations as PowerPoint .pptx (imports cleanly into Google Slides). Use whenever the user asks to create, build, design, or update a presentation, deck, slides, pitch, keynote, board update, propuesta, or report for Fernando Kalid or \"con mi marca / estilo FK / marca personal de Fernando\" — even if they just say \"haz una presentación\" in a Fernando Kalid personal context (his ventures' OWN branded decks are different skills: Success Planner/Winners Circle and Ophira have their own). Applies the exact FK design system: dark editorial (carbón/grafito surfaces, hueso punctuation), single \"navaja\" oxide-red accent, Space Grotesk + Cormorant Garamond italic + IBM Plex Mono, the ∇ micro-mark and Feynman-vertex signature, hairlines-only chrome, and the executive component library (KPIs, callouts, insight cards, tables, pillars, process flows, timelines, dark-themed charts).",
+          "path": "plugins/fk-decks/skills/fk-deck",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-decks/skills/fk-deck/SKILL.md",
+          "files": 4,
+          "size_kb": 25
+        },
+        {
+          "name": "ophira-deck",
+          "description": "Generate on-brand OPHIRA presentations as PowerPoint .pptx (imports cleanly into Google Slides). Use whenever the user asks to create, build, design, or update an OPHIRA presentation, deck, slides, pitch, propuesta, board update, QBR, all-hands, keynote, or report — or anything \"con la marca OPHIRA / estilo OPHIRA / brandeado de OPHIRA\", even if they just say \"haz una presentación\" in an OPHIRA context. Applies the exact design system (Wax Paper & Future Dusk surfaces, Fraunces + Inter, Teal accent, organic blob/arch/ribbon ornaments, 70/20/10 rule) and the component library (KPIs, charts, tables, badges RAG, timelines, pricing, funnels, team cards).",
+          "path": "plugins/fk-decks/skills/ophira-deck",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-decks/skills/ophira-deck/SKILL.md",
+          "files": 9,
+          "size_kb": 632
+        },
+        {
+          "name": "success-planner-deck",
+          "description": "Generate on-brand THE SUCCESS PLANNER corporate presentations as PowerPoint .pptx (also imports cleanly into Google Slides). Use whenever the user asks to create, build, design, or update a Success Planner presentation, deck, slides, pitch, keynote, board update, all-hands, QBR, or report — or anything \"in the Success Planner / Winner's Circle style / brand\". Applies the exact design system (warm bone & onyx surfaces, Playfair Display italic + Bricolage Grotesque + Montserrat, single cognac accent, gold hero numbers), the six master layouts, the official logo, and the executive component library (charts, KPIs, deltas, comparisons, callouts, diagrams, RAG/OKR status, and CFO/COO/CEO/CMO/CIO dashboards).",
+          "path": "plugins/fk-decks/skills/success-planner-deck",
+          "skill_md": "https://raw.githubusercontent.com/Fernando-Kalid/toolkit/main/plugins/fk-decks/skills/success-planner-deck/SKILL.md",
+          "files": 8,
+          "size_kb": 213
+        }
+      ]
+    }
+  ],
+  "agents": [],
+  "artifacts": [],
+  "styles": []
+}

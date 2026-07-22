@@ -1,0 +1,41 @@
+{
+  "name": "fk-toolkit",
+  "owner": {
+    "name": "Fernando Kalid",
+    "email": "fk@fernandokalid.com",
+    "url": "https://github.com/Fernando-Kalid"
+  },
+  "metadata": {
+    "description": "Fernando Kalid's toolkit — Claude skills, agents, artifacts, and style systems. Utilities for excellence.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "fk-decks",
+      "source": "./plugins/fk-decks",
+      "description": "Branded presentation generators (.pptx, Google Slides compatible): FERNANDO KALID personal brand, OPHIRA, and THE SUCCESS PLANNER — each with its full design system, components, and logos.",
+      "version": "0.1.0",
+      "author": { "name": "Fernando Kalid" },
+      "category": "productivity",
+      "tags": ["presentations", "pptx", "branding", "design-system"]
+    },
+    {
+      "name": "business-case",
+      "source": "./plugins/business-case",
+      "description": "Three-phase business case system: Research (market audit with consulting-grade rigor) → Strategy (Go / No-Go / Pivot decision) → Activation (unit economics, GTM, 90-day roadmap). English & Spanish.",
+      "version": "0.1.0",
+      "author": { "name": "Fernando Kalid" },
+      "category": "business",
+      "tags": ["strategy", "market-research", "business-case", "gtm"]
+    },
+    {
+      "name": "comms-studio",
+      "source": "./plugins/comms-studio",
+      "description": "Marketing & communication suite: nine-module Communication & Media Strategy builder, campaign development with a seven-test quality gate, and consent-based UX copywriting (anti-dark-pattern).",
+      "version": "0.1.0",
+      "author": { "name": "Fernando Kalid" },
+      "category": "marketing",
+      "tags": ["comms", "campaigns", "copywriting", "brand-strategy"]
+    }
+  ]
+}
